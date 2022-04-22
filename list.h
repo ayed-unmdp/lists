@@ -27,8 +27,8 @@ t_elem list_get(list *L, int index);
 
 int list_search(list *L, t_elem elem);
 
-void list_insert(list *L, int index, t_elem value);
+void list_insert(list *L, int index, t_elem elem);
 
 void list_delete(list *L, int index);
 
-void list_traverse(list *L, bool look(t_elem value, int index, void *ctx), void *ctx);
+void list_traverse(list *L, bool look(t_elem elem, int index, void *ctx), void *ctx);

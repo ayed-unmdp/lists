@@ -26,7 +26,7 @@ int list_search(list *L, t_elem elem) {
   /*COMPLETAR*/
 }
 
-void list_insert(list *L, int index, t_elem value) {
+void list_insert(list *L, int index, t_elem elem) {
   /*COMPLETAR*/
 }
 
@@ -34,7 +34,7 @@ void list_delete(list *L, int index) {
   /*COMPLETAR*/
 }
 
-void list_traverse(list *L, bool look(t_elem value, int index, void *ctx), void *ctx) {
+void list_traverse(list *L, bool look(t_elem elem, int index, void *ctx), void *ctx) {
   list_node *node = L->head;
   int index = 0;
 

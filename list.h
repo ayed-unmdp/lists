@@ -1,23 +1,34 @@
+#define t_elem int
+#define bool int
 #define true 1
 #define false 0
 
 typedef struct list_node {
-  void *value;
+  t_elem value;
   struct list_node *next;
 } list_node;
 
 typedef struct list {
   list_node *head;
-  int length;
+  int maxsize;
+  int count;
 } list;
 
-typedef int bool;
 
-void list_init(list *L);
-bool list_is_empty(list L);
-bool list_is_full(list L);
-int list_length(list L);
-void *list_get(list L, int index);
-void list_insert(list *L, int index, void *value);
+list *list_new(int maxsize);
+
+bool list_isempty(list *L);
+
+bool list_isfull(list *L);
+
+int list_length(list *L);
+
+t_elem list_get(list *L, int index);
+
+int list_search(list *L, t_elem elem);
+
+void list_insert(list *L, int index, t_elem value);
+
 void list_delete(list *L, int index);
-void list_traverse(list L, bool look(void *value, int index, void *ctx), void *ctx);
+
+void list_traverse(list *L, bool look(t_elem value, int index, void *ctx), void *ctx);

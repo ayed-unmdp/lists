@@ -33,6 +33,7 @@ int list_append(list *L, LIST_ELEM elem){
 
 void list_insert(list *L, int index, LIST_ELEM elem){
   /*** COMPLETAR ***/
+  // insert before current
 }
 
 LIST_ELEM list_first(list *L){
@@ -47,15 +48,12 @@ int list_eol(list *L){
   /*** COMPLETAR ***/
 }
 
-LIST_ELEM list_remove_current (list *L){
+LIST_ELEM list_remove (list *L){
   /*** COMPLETAR ***/
+  // remove current element
 }
 
 LIST_ELEM list_get(list *L, int index){
-  /*** COMPLETAR ***/
-}
-
-LIST_ELEM list_remove (list *L, int index){
   /*** COMPLETAR ***/
 }
 

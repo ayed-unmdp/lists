@@ -1,17 +1,13 @@
 #ifndef _QUEUE
 #define _QUEUE
 
-#define t_elem int
+#define QUEUE_ELEM int
 
-typedef struct _queue{
-    t_elem* a;
-    int head;   //mark the first element
-    int tail;   //mark the next empty position
-    int maxsize;
-    int count;
-} queue;
+typedef struct _queue queue;
 
-queue* queue_new(int maxsize);
+queue* queue_new();
+
+queue* queue_new_with(int maxsize);
 
 void queue_free (queue* q);
 
@@ -23,11 +19,11 @@ int queue_isfull (queue* q);
 
 int queue_isempty (queue* q);
 
-void enqueue (queue* q, t_elem elem);
+void enqueue (queue* q, QUEUE_ELEM elem);
 
-t_elem dequeue (queue* q);
+QUEUE_ELEM dequeue (queue* q);
 
-t_elem peek (queue* q);
+QUEUE_ELEM peek (queue* q);
 
 
 

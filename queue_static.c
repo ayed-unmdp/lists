@@ -3,7 +3,19 @@
 
 #include "queue_static.h"
 
-queue* queue_new(int maxsize){
+typedef struct _queue{
+    QUEUE_ELEM* a;
+    int head;   //mark the first element
+    int tail;   //mark the next empty position
+    int maxsize;// -1 for no limit
+    int count;
+} queue;
+
+queue* queue_new(){
+    /*COMPLETAR*/
+}
+
+queue* queue_new_with(int maxsize){
     /*COMPLETAR*/
 }
 
@@ -27,15 +39,15 @@ int queue_isempty (queue* q){
     /*COMPLETAR*/
 }
 
-void enqueue (queue* q, t_elem elem){    
+void enqueue (queue* q, QUEUE_ELEM elem){    
     /*COMPLETAR*/
 }
 
-t_elem dequeue (queue* q){
+QUEUE_ELEM dequeue (queue* q){
     /*COMPLETAR*/
 }
 
-t_elem peek (queue* q){
+QUEUE_ELEM peek (queue* q){
     /*COMPLETAR*/
 }
 

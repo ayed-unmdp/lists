@@ -1,17 +1,10 @@
-#define t_elem void*
+#define STACK_ELEM void*
 
-typedef struct stack_node {
-  t_elem value;
-  struct stack_node *next;
-} stack_node;
+typedef struct _stack stack;
 
-typedef struct stack {
-  stack_node *head;
-  int maxsize;
-  int count;
-} stack;
+stack* stack_new();
 
-stack* stack_new(int maxsize);
+stack* stack_new_with(int maxsize);
 
 void stack_free(stack* s);
 
@@ -19,14 +12,14 @@ int stack_getsize(stack* s);
 
 int stack_getmaxsize(stack* s);
 
-void push(stack* s, t_elem elem);
+void push(stack* s, STACK_ELEM elem);
 
-t_elem pop(stack* s);
+STACK_ELEM pop(stack* s);
 
-t_elem top(stack* s);
+STACK_ELEM top(stack* s);
 
 int stack_isempty(stack* s);
 
 int stack_isfull(stack* s);
 
-void stack_destroy(stack* s, void elem_free(t_elem));
+void stack_destroy(stack* s, void elem_free(STACK_ELEM));

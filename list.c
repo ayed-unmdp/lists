@@ -2,44 +2,67 @@
 #include <stdlib.h>
 #include "list.h"
 
-list *list_new(int maxsize) {
-  /*COMPLETAR*/
+typedef struct _list_node {
+  t_elem value;
+  struct _list_node *next;
+} list_node;
+
+typedef struct _list {
+  list_node* head;
+  list_node* current;
+  int maxsize;
+  int count;
+} list;
+
+
+list* list_new(int maxsize){
+  /*** COMPLETAR ***/
 }
 
-bool list_isempty(list *L) {
-  /*COMPLETAR*/
+void list_free(list *L){
+  /*** COMPLETAR ***/
 }
 
-bool list_isfull(list *L) {
-  /*COMPLETAR*/
+int list_length(list *L){
+  /*** COMPLETAR ***/
 }
 
-int list_length(list *L) {
-  /*COMPLETAR*/
+int list_append(list *L, LIST_ELEM elem){
+  /*** COMPLETAR ***/
 }
 
-t_elem list_get(list *L, int index) {
-  /*COMPLETAR*/
+void list_insert(list *L, int index, LIST_ELEM elem){
+  /*** COMPLETAR ***/
 }
 
-int list_search(list *L, t_elem elem) {
-  /*COMPLETAR*/
+LIST_ELEM list_first(list *L){
+  /*** COMPLETAR ***/
 }
 
-void list_insert(list *L, int index, t_elem elem) {
-  /*COMPLETAR*/
+LIST_ELEM list_next(list *L){
+  /*** COMPLETAR ***/
 }
 
-void list_delete(list *L, int index) {
-  /*COMPLETAR*/
+int list_eol(list *L){
+  /*** COMPLETAR ***/
 }
 
-void list_traverse(list *L, bool look(t_elem elem, int index, void *ctx), void *ctx) {
-  list_node *node = L->head;
-  int index = 0;
+LIST_ELEM list_remove_current (list *L){
+  /*** COMPLETAR ***/
+}
 
-  while (node != NULL && look(node->value, index, ctx)) {
-    node = node->next;
-    index++;
-  }
+LIST_ELEM list_get(list *L, int index){
+  /*** COMPLETAR ***/
+}
+
+LIST_ELEM list_remove (list *L, int index){
+  /*** COMPLETAR ***/
+}
+
+bool list_isempty(list *L){
+  /*** COMPLETAR ***/
+}
+
+bool list_isfull(list *L){
+  /*** COMPLETAR ***/
 }

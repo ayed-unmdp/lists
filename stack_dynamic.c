@@ -3,7 +3,22 @@
 
 #include "stack.h"
 
-stack* stack_new(int maxsize) {
+typedef struct _stack_node {
+  STACK_ELEM value;
+  struct _stack_node *next;
+} stack_node;
+
+typedef struct _stack {
+  stack_node *head;
+  int maxsize; // -1 for no limit
+  int count;
+} stack;
+
+stack* stack_new() {
+  /*COMPLETAR*/
+}
+
+stack* stack_new_with(int maxsize) {
   /*COMPLETAR*/
 }
 
@@ -27,18 +42,18 @@ int stack_isfull(stack* s) {
   /*COMPLETAR*/
 }
 
-void push(stack* s, t_elem elem) {
+void push(stack* s, STACK_ELEM elem) {
   /*COMPLETAR*/
 }
 
-t_elem pop(stack* s) {
+STACK_ELEM pop(stack* s) {
   /*COMPLETAR*/
 }
 
-t_elem top(stack* s) {
+STACK_ELEM top(stack* s) {
   /*COMPLETAR*/
 }
 
-void stack_destroy(stack* s, void elem_free(t_elem)){
+void stack_destroy(stack* s, void elem_free(STACK_ELEM)){
   /*COMPLETAR*/
 }

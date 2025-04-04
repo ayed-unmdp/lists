@@ -3,7 +3,17 @@
 
 #include "stack_static.h"
 
-stack* stack_new(int maxsize){
+typedef struct _stack {
+    STACK_ELEM* s;
+    int top;
+    int maxsize; // -1 for no limit
+  } stack;
+
+stack* stack_new(){
+    /*COMPLETAR*/
+}
+
+stack* stack_new_with(int maxsize){
     /*COMPLETAR*/
 }
 
@@ -19,15 +29,15 @@ int stack_getmaxsize(stack* s){
     /*COMPLETAR*/
 }
 
-void push(stack* s, t_elem elem){
+void push(stack* s, STACK_ELEM elem){
     /*COMPLETAR*/
 }
 
-t_elem pop(stack* s){
+STACK_ELEM pop(stack* s){
     /*COMPLETAR*/
 }
 
-t_elem top(stack* s){
+STACK_ELEM top(stack* s){
     /*COMPLETAR*/
 }
 
